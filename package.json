@@ -3,9 +3,16 @@
 	"version": "0.0.1",
 	"description": "ChannelEngine API Client for Node.js",
 	"main": "dist/src/index.js",
-	"repository": "git@github.com:/RienNeVaPlus/channelengine.git",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RienNeVaPlus/channelengine.git"
+	},
 	"author": "RienNeVaPlus <?@rienneva.plus>",
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RienNeVaPlus/channelengine/issues"
+	},
+	"homepage": "https://github.com/RienNeVaPlus/channelengine#readme",
 	"scripts": {
 		"start": "ts-node-dev --transpile-only src/index.ts",
 		"test": "ts-node-dev --transpile-only src/test.ts",

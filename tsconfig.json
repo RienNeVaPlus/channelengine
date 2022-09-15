@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"lib": ["dom", "es6", "es2018", "esnext.asynciterable"],
+		"noImplicitAny": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"rootDir": "./",
+		"strictNullChecks": true,
+		"watch": false,
+		"rootDirs": ["src"],
+		"resolveJsonModule": true,
+		"outDir": "dist"
+	},
+	"include": [
+		"./src/**/*.ts"
+	],
+	"exclude": ["**/node_modules/*"]
+}

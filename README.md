@@ -19,7 +19,7 @@
     ·
     <a href="https://channelengine.zendesk.com/hc/en-us/sections/4406511272733-Merchant-API">ChannelEngine Docs</a>
     ·
-    <a href="https://github.com/RienNeVaPlus/channelengine/issues">Request Feature</a>
+    <a href="https://github.com/RienNeVaPlus/channelengine/issues">Issues</a>
   </p>
 </div>
 

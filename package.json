@@ -1,6 +1,6 @@
 {
 	"name": "channelengine",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"description": "ChannelEngine API Client for Node.js",
 	"main": "dist/src/index.js",
 	"repository": {
@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/RienNeVaPlus/channelengine#readme",
 	"scripts": {
-		"start": "ts-node-dev --transpile-only src/index.ts",
+		"start": "tsc -w",
 		"test": "ts-node-dev --transpile-only src/test.ts",
 		"build": "rm -rf ./dist && tsc",
 		"prod": "node dist/src/index.js",

@@ -70,14 +70,14 @@ npm install channelengine
 ### Example
 
 ```ts
-import {Channelengine} from 'channelengine'
+import {ChannelEngine} from 'channelengine'
 
 // provided by ChannelEngine
 const tenant = 'demo'
 const apiKey = 'myApiKey'
 
 // create instance and request IN_PROGRESS orders
-const api = new Channelengine(tenant, apiKey, {maxRetries: 10, version: 2})
+const api = new ChannelEngine(tenant, apiKey, {maxRetries: 10, version: 2})
 const response = await api.GET('orders', {
   statuses: 'IN_PROGRESS'
 })

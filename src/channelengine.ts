@@ -7,7 +7,7 @@ export class ChannelEngine {
 
   url: string
   apiKey: string
-  maxRetries = 10
+  maxRetries: number
 
   constructor(tenant: string, apiKey: string, opt: {
     maxRetries?: number,
@@ -41,7 +41,7 @@ export class ChannelEngine {
     const url = this.url + endpoint + toQueryString({...param, apiKey})
 
     try {
-      const res = await fetch(url, {...(body||{}), method})
+      const res = await fetch(url, {body: body ? JSON.stringify(body) : null, method})
       return  await res.json()
     } catch(e) {
       retries++
@@ -82,8 +82,6 @@ export class ChannelEngine {
         const next = await this.fetch(method, {...query, page}, opt)
         Content.push(...next.Content)
       }
-
-      return Content
     }
 
     return json
@@ -107,7 +105,7 @@ export class ChannelEngine {
    * @param [body]
    */
   async POST(endpoint: string, query: any = {}, body: any = {}){
-    return await this.json('POST', {endpoint, ...query}, body)
+    return await this.json('POST', {endpoint, ...query}, {body})
   }
 
   /**
@@ -118,7 +116,7 @@ export class ChannelEngine {
    * @param [body]
    */
   async PUT(endpoint: string, query: any = {}, body: any = {}){
-    return await this.json('PUT', {endpoint, ...query}, body)
+    return await this.json('PUT', {endpoint, ...query}, {body})
   }
 
   /**
@@ -129,7 +127,7 @@ export class ChannelEngine {
    * @param [body]
    */
   async PATCH(endpoint: string, query: any = {}, body: any = {}){
-    return await this.json('PATCH', {endpoint, ...query}, body)
+    return await this.json('PATCH', {endpoint, ...query}, {body})
   }
 
   /**

@@ -82,6 +82,8 @@ export class ChannelEngine {
         const next = await this.fetch(method, {...query, page}, opt)
         Content.push(...next.Content)
       }
+
+      return {ItemsPerPage: Content.length, TotalCount, Content}
     }
 
     return json
